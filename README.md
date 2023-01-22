@@ -1,8 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This repo was made with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) using the latest version of NextJS/TypeScript and connects using the v3 of the Content API from [`GhostCMS`](https://ghost.org/docs/content-api/javascript/).
+
+This serves as a starting template to fetch and retieve all posts and single posts as a Statically Generated Site. I might update this repo in the future to use other parts of the GhostCMS Content API, but this is just a proof of concept.
 
 ## Getting Started
 
-First, run the development server:
+First, create your own .env file using the .env-example file and replace the values of your BLOG_URL and CONTENT_API_KEY with the values that you get from GhostCMS. If you currently don't have a Content API Key, you can create one by going to the GhostCMS Admin panel and adding a Custom Integration.
+
+Second, run the development server:
 
 ```bash
 npm run dev
