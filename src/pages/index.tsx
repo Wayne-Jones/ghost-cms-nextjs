@@ -1,8 +1,8 @@
 
 import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
-import { getAllPosts } from './util'
-import { Post } from './types'
+import { getAllPosts } from '../helper/util'
+import { Post } from '../helper/types'
 
 export const getStaticProps = async () => {
   const posts = await getAllPosts()

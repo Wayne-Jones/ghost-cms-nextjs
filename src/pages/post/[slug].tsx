@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '@/styles/Home.module.css'
-import { Post } from '../types'
-import { getPost, getAllPosts } from '../util'
+import { Post } from '../../helper/types'
+import { getPost, getAllPosts } from '../../helper/util'
 
 //Ghost CMS request
 export const getStaticProps = async (context: { params: { slug: string } }) => {
