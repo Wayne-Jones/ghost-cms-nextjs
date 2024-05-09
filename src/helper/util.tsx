@@ -30,7 +30,7 @@ export async function getAllPosts(): Promise<Post[]> {
     let posts: Post[] = [];
     if (BLOG_URL && CONTENT_API_KEY) {
         const url = `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug`
-        const res: { posts: Post[] } | void = await fetch(url)
+        const res = await fetch(url, { next: { revalidate: 10 } })
             .then<{ posts: Post[] }>((response: Response) => {
                 if (response.ok) {
                     return response.json()
