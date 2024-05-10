@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 async function getData() {
-  const res = await fetch(`${LOCAL_URL}/api/post`);
+  const res = await fetch(`${LOCAL_URL}/api/post`, { next: { revalidate: 10 } });
   const posts: Post[] = await res.json();
   return posts;
 }
