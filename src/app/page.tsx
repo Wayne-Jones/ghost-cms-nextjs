@@ -1,14 +1,16 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
-import { getAllPosts } from "../helper/util";
+import { Post } from "@/helper/types";
+const { LOCAL_URL } = process.env;
 
 export const metadata: Metadata = {
   title: "Home",
 };
 
 async function getData() {
-  const posts = await getAllPosts();
+  const res = await fetch(`${LOCAL_URL}/api/post`);
+  const posts: Post[] = await res.json();
   return posts;
 }
 
