@@ -6,7 +6,7 @@ const { BLOG_URL, CONTENT_API_KEY } = process.env;
 export async function GET() {
   if (BLOG_URL && CONTENT_API_KEY) {
     try {
-      const url = `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug`;
+      const url = `${BLOG_URL}/ghost/api/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug`;
       const res = await fetch(url, { next: { revalidate: 10 } });
       if (!res.ok) {
         throw new Error("Unable to retreive from network");
