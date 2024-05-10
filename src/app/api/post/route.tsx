@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { Post } from "../../../helper/types";
+import { Post } from "@/helper/types";
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
 //Get All Posts
