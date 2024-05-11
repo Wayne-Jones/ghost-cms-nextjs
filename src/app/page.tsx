@@ -1,21 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
-import { Post } from "@/helper/types";
-const { LOCAL_URL } = process.env;
+import { getAllPosts } from "@/helper/util";
 
 export const metadata: Metadata = {
   title: "Home",
 };
 
-async function getData() {
-  const res = await fetch(`${LOCAL_URL}/api/post`, { next: { revalidate: 10 } });
-  const posts: Post[] = await res.json();
-  return posts;
-}
-
 export default async function Home() {
-  const posts = await getData();
+  const posts = await getAllPosts();
   return (
     <>
       <div className={styles.container}>
