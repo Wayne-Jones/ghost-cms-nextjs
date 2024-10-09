@@ -18,7 +18,7 @@
     "typescript": "5.6.3"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.2.14",
+    "@next/eslint-plugin-next": "^14.2.15",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "8.57.1",
