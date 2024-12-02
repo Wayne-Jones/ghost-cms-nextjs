@@ -15,7 +15,8 @@ export default async function PostSlug({
 }: {
   params: { slug: string };
 }) {
-  const post = await getPost(params.slug);
+  const param = await params;
+  const post = await getPost(param.slug);
   return (
     <>
       <div className={styles.container}>
