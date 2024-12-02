@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -12,16 +12,17 @@
     "@types/node": "22.10.1",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
-    "next": "14.2.15",
+    "next": "15.0.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "typescript": "5.7.2"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.2.16",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "8.57.1",
-    "eslint-config-next": "14.2.15"
+    "@next/eslint-plugin-next": "^15.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "eslint": "9.16.0",
+    "eslint-config-next": "15.0.3",
+    "globals": "^15.13.0"
   }
 }
