@@ -20,7 +20,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.1.7",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
-    "@typescript-eslint/parser": "^8.24.1",
+    "@typescript-eslint/parser": "^8.25.0",
     "eslint": "9.21.0",
     "eslint-config-next": "15.1.7",
     "globals": "^15.15.0"
