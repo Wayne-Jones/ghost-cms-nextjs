@@ -31,8 +31,8 @@ importers:
         version: 5.8.2
     devDependencies:
       '@next/eslint-plugin-next':
-        specifier: ^15.2.3
-        version: 15.2.3
+        specifier: ^15.2.4
+        version: 15.2.4
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.28.0
         version: 8.28.0(@typescript-eslint/parser@8.27.0(eslint@9.23.0)(typescript@5.8.2))(eslint@9.23.0)(typescript@5.8.2)
