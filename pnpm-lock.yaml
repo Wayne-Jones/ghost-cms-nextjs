@@ -31,8 +31,8 @@ importers:
         version: 5.8.3
     devDependencies:
       '@next/eslint-plugin-next':
-        specifier: ^15.2.4
-        version: 15.2.4
+        specifier: ^15.2.5
+        version: 15.2.5
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.29.1
         version: 8.29.1(@typescript-eslint/parser@8.29.1(eslint@9.24.0)(typescript@5.8.3))(eslint@9.24.0)(typescript@5.8.3)
@@ -235,6 +235,9 @@ packages:
 
   '@next/eslint-plugin-next@15.2.4':
     resolution: {integrity: sha512-O8ScvKtnxkp8kL9TpJTTKnMqlkZnS+QxwoQnJwPGBxjBbzd6OVVPEJ5/pMNrktSyXQD/chEfzfFzYLM6JANOOQ==}
+
+  '@next/eslint-plugin-next@15.2.5':
+    resolution: {integrity: sha512-Q1ncASVFKSy+AbabimYxr/2HH/h+qlKlwu1fYV48xUefGzVimS3i3nKwYsM2w+rLdpMFdJyoVowrYyjKu47rBw==}
 
   '@next/swc-darwin-arm64@15.2.4':
     resolution: {integrity: sha512-1AnMfs655ipJEDC/FHkSr0r3lXBgpqKo4K1kiwfUf3iE68rDFXZ1TtHdMvf7D0hMItgDZ7Vuq3JgNMbt/+3bYw==}
@@ -1670,6 +1673,10 @@ snapshots:
   '@next/env@15.2.4': {}
 
   '@next/eslint-plugin-next@15.2.4':
+    dependencies:
+      fast-glob: 3.3.1
+
+  '@next/eslint-plugin-next@15.2.5':
     dependencies:
       fast-glob: 3.3.1
 
