@@ -9,7 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@tryghost/content-api": "^1.12.2",
+    "@tryghost/content-api": "^1.12.3",
     "@types/node": "^25.0.7",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
