@@ -25,6 +25,6 @@
     "@typescript-eslint/parser": "^8.53.1",
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.4",
-    "globals": "^16.5.0"
+    "globals": "^17.0.0"
   }
 }
