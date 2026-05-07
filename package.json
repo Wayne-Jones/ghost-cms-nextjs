@@ -22,6 +22,6 @@
     "@types/tryghost__content-api": "^1.3.17",
     "@typescript-eslint/parser": "^8.58.2",
     "eslint": "^9.39.2",
-    "eslint-config-next": "^16.2.4"
+    "eslint-config-next": "^16.2.5"
   }
 }
