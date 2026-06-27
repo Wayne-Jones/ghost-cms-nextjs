@@ -1,46 +1,51 @@
 {$DOMAIN} {
 	import snippets/Logging
 
-	# Traffic Analytics service
-	import snippets/TrafficAnalytics
+    # Traffic Analytics service
+    import snippets/TrafficAnalytics
 
-	# ActivityPub Service
-	import snippets/ActivityPub
+    # ActivityPub Service
+    import snippets/ActivityPub
 
-	# Default proxy everything else to Ghost
-	handle {
-		reverse_proxy ghost:2368
-	}
+    # Default proxy everything else to Next.js app
+    reverse_proxy app:3000 {
+    	header_up Host {host}
+    	header_up X-Forwarded-Proto {scheme}
+    	header_up X-Forwarded-Host {host}
+    }
 
-	# Optional: Enable gzip compression
-	encode gzip
+    # Optional: Enable gzip compression
+    encode gzip
 
-	# Optional: Add security headers
-	import snippets/SecurityHeaders
+    # Optional: Add security headers
+    import snippets/SecurityHeaders
+
 }
 
-# Separate admin domains
+# Separate admin domain
 # To use a separate domain for Ghost Admin uncomment the block below (recommended)
-# {$ADMIN_DOMAIN} {
-# 	import snippets/Logging
-#
-# 	# Traffic Analytics service
-# 	import snippets/TrafficAnalytics
-#
-# 	# ActivityPub Service
-# 	import snippets/ActivityPub
-#
-# 	# Default proxy everything else to Ghost
-# 	handle {
-# 		reverse_proxy ghost:2368
-# 	}
-#
-# 	# Optional: Enable gzip compression
-# 	encode gzip
-#
-# 	# Optional: Add security headers
-# 	import snippets/SecurityHeaders
-# }
+ {$ADMIN_DOMAIN} {
+ 	import snippets/Logging
+
+ 	# Traffic Analytics service
+ 	import snippets/TrafficAnalytics
+
+ 	# ActivityPub Service
+ 	import snippets/ActivityPub
+
+ 	# Default proxy everything else to Ghost
+ 	reverse_proxy ghost:2368 {
+    	header_up Host {host}
+    	header_up X-Forwarded-Proto {scheme}
+    	header_up X-Forwarded-Host {host}
+   }
+
+ 	# Optional: Enable gzip compression
+ 	encode gzip
+
+ 	# Optional: Add security headers
+ 	import snippets/SecurityHeaders
+ }
 
 # Redirect www -> root domain
 # To redirect the www variant of your domain to the non-www variant uncomment the 4 lines below
