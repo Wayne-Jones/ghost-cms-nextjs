@@ -3,7 +3,9 @@
 services:
   ghost:
     # Do not alter this without updating the Tinybird Sync container as well
-    image: ghost:${GHOST_VERSION:-6-alpine}
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: always
     # This is required to import current config when migrating
     env_file:
@@ -40,7 +42,7 @@ services:
       - ghost_network
 
   db:
-    image: mysql:8.0.44@sha256:f37951fc3753a6a22d6c7bf6978c5e5fefcf6f31814d98c582524f98eae52b21
+    image: mysql:8.4.10
     restart: always
     expose:
       - "3306"
@@ -63,7 +65,7 @@ services:
       - ghost_network
 
   app:
-    image: node:25-alpine3.23
+    image: node:26-alpine
     command: >
       sh -c "
         apk add --no-cache git && \
@@ -71,16 +73,14 @@ services:
         pnpm install && \
         pnpm run dev
       "
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     networks:
       - ghost_network
     depends_on:
       db:
         condition: service_healthy
       ghost:
-        condition: service_started
-      caddy:
         condition: service_started
     restart: always
     volumes:
@@ -90,7 +90,7 @@ services:
     working_dir: /usr/src/app
 
   caddy:
-    image: caddy:2.10.2-alpine@sha256:953131cfea8e12bfe1c631a36308e9660e4389f0c3dfb3be957044d3ac92d446
+    image: caddy:2.11.4-alpine
     restart: always
     ports:
       - "80:80"
@@ -105,11 +105,12 @@ services:
       - caddy_config:/config
     depends_on:
       - ghost
+      - app
     networks:
       - ghost_network
 
   traffic-analytics:
-    image: ghost/traffic-analytics:1.0.23@sha256:e55789b748f3de9df44e803dff6f90251330270227fefab7e2bcdf185e3291c6
+    image: ghost/traffic-analytics:1.0.244
     restart: always
     expose:
       - "3000"
@@ -127,7 +128,7 @@ services:
       - ghost_network
 
   activitypub:
-    image: ghcr.io/tryghost/activitypub:1.1.0@sha256:39c212fe23603b182d68e67d555c6b9b04b1e57459dfc0bef26d6e4980eb04d1
+    image: ghcr.io/tryghost/activitypub:1.2.5
     restart: always
     expose:
       - "8080"
@@ -212,7 +213,7 @@ services:
     tty: true
 
   activitypub-migrate:
-    image: ghcr.io/tryghost/activitypub-migrations:1.1.0@sha256:b3ab20f55d66eb79090130ff91b57fe93f8a4254b446c2c7fa4507535f503662
+    image: ghcr.io/tryghost/activitypub-migrations:1.2.5
     environment:
       MYSQL_DB: mysql://${DATABASE_USER:-ghost}:${DATABASE_PASSWORD:?DATABASE_PASSWORD environment variable is required}@tcp(db:3306)/activitypub
     networks:
