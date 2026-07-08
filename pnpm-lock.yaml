@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@tryghost/content-api':
-        specifier: ^1.12.9
-        version: 1.12.9
+        specifier: ^1.12.10
+        version: 1.12.10
       '@types/node':
         specifier: ^26.1.1
         version: 26.1.1
@@ -420,8 +420,8 @@ packages:
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
 
-  '@tryghost/content-api@1.12.9':
-    resolution: {integrity: sha512-WHdzwWl5lnOoH6c1nEom3m9L5s/9vF/IcIvOj3X4Wdv1K5AWAspOVc4e/zaC14GhkP9VjERFEj62zYz+dXhr7A==}
+  '@tryghost/content-api@1.12.10':
+    resolution: {integrity: sha512-lESZtuKKiEUsagsfUb/oxjasLKjh3gHCmUgyfdvwgcoO58GGb8UFOakZuB0ih0dpIS1IQ+hDS2KJujdgFetPog==}
 
   '@tybys/wasm-util@0.10.3':
     resolution: {integrity: sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==}
@@ -733,8 +733,8 @@ packages:
     resolution: {integrity: sha512-s7iGf5GaVMxEG0ENN9x+xTr7GFZCb1ZP/1uATUpCEK2X78nDB3RwbtFCo9pGAf9ru+VwoQ464DkaLEeRM08wJA==}
     engines: {node: '>=4'}
 
-  axios@1.17.0:
-    resolution: {integrity: sha512-J8SwNxprqqpbfenehxWYXE7CW+wM1BB4w3+N+g+/Wx40xM4rsLrfPmHHxSWIxJLYDgSY/HqlFPIYb2/S3rxafw==}
+  axios@1.18.1:
+    resolution: {integrity: sha512-3nTvFlvpn9Zu/RkHUqtc7/+al4UpRW5az71ap5zccp6e8RAYEzhMTecX8Dz1wWDYrPpUoB1HAQEGEAEvUr7S9g==}
 
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
@@ -2212,9 +2212,9 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@tryghost/content-api@1.12.9':
+  '@tryghost/content-api@1.12.10':
     dependencies:
-      axios: 1.17.0
+      axios: 1.18.1
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -2563,7 +2563,7 @@ snapshots:
 
   axe-core@4.12.1: {}
 
-  axios@1.17.0:
+  axios@1.18.1:
     dependencies:
       follow-redirects: 1.16.0
       form-data: 4.0.6
