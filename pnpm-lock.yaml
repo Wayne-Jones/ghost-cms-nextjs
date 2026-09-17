@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@tryghost/content-api':
-        specifier: ^1.12.10
-        version: 1.12.10(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
+        specifier: ^1.12.11
+        version: 1.12.11(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       '@types/node':
         specifier: ^26.5.1
         version: 26.5.1
@@ -456,8 +456,8 @@ packages:
   '@swc/helpers@0.5.23':
     resolution: {integrity: sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==}
 
-  '@tryghost/content-api@1.12.10':
-    resolution: {integrity: sha512-lESZtuKKiEUsagsfUb/oxjasLKjh3gHCmUgyfdvwgcoO58GGb8UFOakZuB0ih0dpIS1IQ+hDS2KJujdgFetPog==}
+  '@tryghost/content-api@1.12.11':
+    resolution: {integrity: sha512-KH4hMmkhNsY5elmsdStiwkYhNrgsmmFwdwEcFosgYmKhR4DqhB3uqxhc0tI6Jj1yDLOZdfSzjRuqHKha1hyQhA==}
 
   '@tybys/wasm-util@0.10.3':
     resolution: {integrity: sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==}
@@ -742,8 +742,8 @@ packages:
     resolution: {integrity: sha512-UzGt8zg7Ny8djbYMhxl2zuEevVa7r2gJjYY5Lwr1xM7+XU2nd6CkIWFTVcCIbAP63vSz71NaVyyuSk9lHKcy0A==}
     engines: {node: '>=4'}
 
-  axios@1.18.1:
-    resolution: {integrity: sha512-3nTvFlvpn9Zu/RkHUqtc7/+al4UpRW5az71ap5zccp6e8RAYEzhMTecX8Dz1wWDYrPpUoB1HAQEGEAEvUr7S9g==}
+  axios@1.20.0:
+    resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
 
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
@@ -2245,9 +2245,9 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@tryghost/content-api@1.12.10(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)':
+  '@tryghost/content-api@1.12.11(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)':
     dependencies:
-      axios: 1.18.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
+      axios: 1.20.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -2544,7 +2544,7 @@ snapshots:
 
   axe-core@4.13.0: {}
 
-  axios@1.18.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
+  axios@1.20.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       follow-redirects: 1.16.0(debug@4.4.3(supports-color@7.2.0))
       form-data: 4.0.6
